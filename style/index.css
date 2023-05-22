@@ -166,8 +166,8 @@ body .container .about .about__content {
   justify-content: space-evenly;
 }
 body .container .about .about__content .about__image {
-  width: 45%;
-  height: 50vh;
+  width: 55%;
+  height: 80vh;
   background-image: url("../assets/about.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -175,6 +175,14 @@ body .container .about .about__content .about__image {
 }
 body .container .about .about__content .about__text {
   width: 35%;
+}
+body .container .about .about__content .about__text .text__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body .container .about .about__content .about__text .text__content a {
+  text-decoration: none;
 }
 body .container .testimonials {
   background-color: #fff5f2;
