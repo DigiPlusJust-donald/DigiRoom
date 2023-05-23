@@ -33,6 +33,7 @@
 							<a
 								href="#home"
 								class="navbar__link"
+								id="hom"
 								>Home</a
 							>
 						</li>
@@ -40,6 +41,7 @@
 							<a
 								href="#services"
 								class="navbar__link"
+								id="serv"
 								>Services</a
 							>
 						</li>
@@ -47,6 +49,7 @@
 							<a
 								href="#about"
 								class="navbar__link"
+								id="abt"
 								>About Us</a
 							>
 						</li>
@@ -55,6 +58,7 @@
 							<a
 								class="navbar__link"
 								href="#calendar"
+								id="avl"
 								>Availability</a
 							>
 						</li>
@@ -62,6 +66,7 @@
 							<a
 								href="#contact"
 								class="navbar__link"
+								id="ctc"
 								>Contact Us</a
 							>
 						</li>
@@ -70,7 +75,7 @@
 				<div class="social__media">
 					<div class="check__form">
 						<p class="en__lang">En</p>
-							<input type="checkbox" name="lang" id="lang" class="lang">
+							<input type="checkbox" name="lang" id="lang" class="lang" onclick="changeLang()">
 							<label for="lang">Fr</label>
 					</div>
 					<ul>
@@ -109,21 +114,22 @@
 				id="home"
 			>
 				<div class="banner__left">
-					<h1 class="title">
-						<span class="bold__part">We Help You</span> to grow your Business
+					<h1 class="title bannerTitle1">
+						<span class="bold__part">We Help You</span>
+						<span class="black__part"> to grow your Business</span>
 					</h1>
 					<h3 class="banner__subtitle">
 						Finally a solution tailored to your specific needs and accessible
 						according to your budget and demand.
 					</h3>
-					<p>
+					<p class="banner__content__text">
 						Activities involved: 
-						<ul>
-							<li>Virtual grouping of people for distance learning with facilitators connected from around the world.</li>
-							<li>Online meetings or seminars for individuals or companies seeking a supportive environment. </li>
-							<li>Online certifications in the standards prescribed by the certification agency.</li>
-							<li>Private and intimate onlinemeetings.</li>
-							<li>Job interviews</li>
+						<ul class="activities__list">
+							<li class="activities__item1">Virtual grouping of people for distance learning with facilitators connected from around the world.</li>
+							<li class="activities__item2">Online meetings or seminars for individuals or companies seeking a supportive environment. </li>
+							<li class="activities__item3">Online certifications in the standards prescribed by the certification agency.</li>
+							<li class="activities__item4">Private and intimate onlinemeetings.</li>
+							<li class="activities__item5">Job interviews</li>
 						</ul>
 					
 					</p>
@@ -139,29 +145,33 @@
 				<div class="banner__right"></div>
 			</div>
 			<section id="learn__more" class="learn__more">
-					<h1 class="title">It Also <span class="bold__part">Include...</span> </h1>
+					<h1 class="title">
+						<span class="learn__more_first">It Also</span>
+						<span class="bold__part"> Include...</span> </h1>
 
 				<div class="home__subtext">
 						<div class="subtext__left">
-							<strong>Minimum room configuration:</strong> 
-							<ul>
-								<li>An acoustic and air-conditioned setting</li>
-								<li>A permanent and good capacity internet access with a backup system in case of interruption of the main one</li>
-								<li>A permanent electrical supply with protection equipment and an electrical generator for recovery in case of power failure.</li>
-								<li>A giant Smart TV screen for presentation and video conferencing.</li>
-								<li>A sophisticated and integrated Microphone and Camera device containing the entire room.</li>
-								<li>A central console for session administration.</li>
-								<li>Collaborative tools such as Microsoft Teams, Zoom, Google Meet, etc.</li>
-								<li>Availability consultation and room reservation management interfaces.</li>
+							<strong>  Minimum room configuration:</strong> 
+							<ul class="subtext_ul">
+								<li class="subtext_li1">An acoustic and air-conditioned setting</li>
+								<li class="subtext_li2">A permanent and good capacity internet access with a backup system in case of interruption of the main one</li>
+								<li class="subtext_li3">A permanent electrical supply with protection equipment and an electrical generator for recovery in case of power failure.</li>
+								<li class="subtext_li4">A giant Smart TV screen for presentation and video conferencing.</li>
+								<li class="subtext_li5">A sophisticated and integrated Microphone and Camera device containing the entire room.</li>
+								<li class="subtext_li6">A central console for session administration.</li>
+								<li class="subtext_li7">Collaborative tools such as Microsoft Teams, Zoom, Google Meet, etc.</li>
+								<li class="subtext_li8">Availability consultation and room reservation management interfaces.</li>
 							</ul>
 								
 						</div>
 						<div class="subtext__right">
 							<strong>Promotion:</strong> 
 							<ul>
-								<li style="list-style: none;">Enjoy our services for free for all the first hours of your reservations until 
+								<li style="list-style: none;">
+									Enjoy our services for free for all the first hours of your reservations until 
 							   the end of June. Just contact us or make the reservation yourself online through 
-							   the addresses provided on this page. </li>
+							   the addresses provided on this page. 
+							</li>
 							</ul>
                                
 						</div>
@@ -191,16 +201,13 @@
 						/>
 						<h3>A great space for your meetings</h3>
 						<p>
-							You want to have a serious meeting with a partner at a distance or on location.
-							You want to attend a serious meeting or seminar in a suitable setting.
+							You want to have a serious meeting with a partner at a distance or on location.You want to attend a serious meeting or seminar in a suitable setting.
 							<ul style="list-style: square;">
 								
 								<li>DigiRoom offers you a room with a capacity of 8 places extensible to 10 to group your learners in the covered city.</li>
 								
 							</ul>
-							
-
-
+						
 						</p>
 						<button class="button">
 							<a
@@ -271,14 +278,12 @@
 									<p>
 										 DigiPlus Consulting is a start-up created in Douala in 2016 with two main missions:
 										<ul>
-											<li>Accompagner companies in the digital transformation process.</li>
+											<li>Support companies in the digital transformation process.</li>
 											<li>Influence digital ecosystems by introducing innovative digital offerings to improve the lives of people and communities.</li>
 										</ul>
 									</p>
 									<p> 
-											DigiRoom represents a line of products whose interest is to create media 
-										platforms to contribute to the modernization of training and communication activities for 
-										the benefit of businesses, individuals and communities.
+										DigiRoom represents a line of products whose interest is to create media platforms to contribute to the modernization of training and communication activities for the benefit of businesses, individuals and communities.
 									</p>
 							</div>
 							
@@ -378,12 +383,7 @@
 				<h1 class="title">
 					Check the <span class="bold__part">availability of our Room</span>
 				</h1>
-				<p class="centered">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
-					reiciendis ex quis sit aut ipsam, sequi eveniet fuga quas et
-					voluptates blanditiis, iusto rerum praesentium fugit nihil atque
-					veritatis. Perferendis!
-				</p>
+				
 				<div class="iframes__part">
 					<iframe
 						class="iframe__1"
@@ -406,16 +406,23 @@
 				class="contact"
 				id="contact"
 			>
-				<h1 class="title">Contact-Us</h1>
+				<h1 class="title">Contact Us</h1>
 				<div class="contact__container">
 					<div class="text">
 						<h2>DigiRoom Service</h2>
 						<p>
-							Our ambition is to settle in the big cities of the country with the concern of getting closer to the people in need.
-							At the moment, we have a room located in Douala Bonamoussadi, behind Hotel de France.
-							Please discover us and make your reservations at the following address:
+							Our ambition is to settle in the big cities of the country with the concern of getting closer to the people in need.At the moment, we have a room located in Douala Bonamoussadi, behind Hotel de France.Please discover us and make your reservations at the following address:
 						</p>
-						<p><strong> Tel : 677104040 / 696422222(Whatsapp)</strong></p>
+						<p>
+								<strong> 
+									<ul>
+										<li>Tel : 677104040 / 696422222(Whatsapp)</li>
+										<li>website: www.digiroom.cm</li>
+										<li>Social Medias : Facebook, LindkedIn, YouTube.</li>
+										<li>Mail : DigiRoom@digiplusconsulting.com</li>
+									</ul>
+								</strong>
+						</p>
 						<h3>GET IN TOUCH</h3>
 						<div class="mail__form">
 							<form action="mailto:DigiRoom@digiplusconsulting.com">
@@ -448,5 +455,6 @@
 				&copy; Copyright 2023 DigiRoom Service | All rights Reserved
 			</footer>
 		</div>
+		<script src="../js/script.js"></script>
 	</body>
 </html>
