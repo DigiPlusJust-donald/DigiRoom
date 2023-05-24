@@ -165,9 +165,6 @@ body {
 				h1 {
 					font-size: 350%;
 				}
-				.button__container {
-					padding-top: 5%;
-				}
 			}
 			.banner__right {
 				width: 45%;
@@ -338,7 +335,7 @@ body {
 			flex-direction: column;
 			align-items: end;
 			left: 93%;
-			top: 805vh;
+			top: 550vh;
 			border-radius: 50%;
 			transition: background-color 600ms ease-in-out;
 			&:hover {
