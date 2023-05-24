@@ -9,6 +9,7 @@
 	margin-top: 5px;
 	background-color: #ff8210;
 	text-align: center;
+	text-decoration: none;
 	color: white;
 	border: none;
 	border-radius: 15px;
@@ -163,6 +164,9 @@ body {
 				width: 40%;
 				h1 {
 					font-size: 350%;
+				}
+				.button__container {
+					padding-top: 5%;
 				}
 			}
 			.banner__right {

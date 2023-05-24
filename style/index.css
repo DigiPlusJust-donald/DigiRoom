@@ -8,6 +8,7 @@
   margin-top: 5px;
   background-color: #ff8210;
   text-align: center;
+  text-decoration: none;
   color: white;
   border: none;
   border-radius: 15px;
@@ -164,6 +165,9 @@ body .container .banner .banner__left {
 }
 body .container .banner .banner__left h1 {
   font-size: 350%;
+}
+body .container .banner .banner__left .button__container {
+  padding-top: 5%;
 }
 body .container .banner .banner__right {
   width: 45%;
