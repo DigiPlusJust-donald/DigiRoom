@@ -58,7 +58,7 @@ const data = {
 				card1: {
 					cardTitle: 'Un espace idéal pour vos réunions',
 					cardSubtitle:
-						'Vous voulez effectuer un rencontre sérieuse avec un partenaire a distance ou surplace. Vous voulez assister a une réunion ou séminaire sérieux dans un cadre propice.',
+						'Vous voulez effectuer une rencontre sérieuse avec un partenaire a distance ou surplace. Vous voulez assister a une réunion ou séminaire sérieux dans un cadre propice.',
 					ul: {
 						li: "DigiRoom vous offre une salle d'une capacité de 8 places extensible a 10 pour regrouper vos apprenants dans la ville couverte.",
 					},
@@ -83,7 +83,9 @@ const data = {
 			},
 		},
 		A_Propos: {
-			subtitle: 'Fiction ou réalité',
+			title: 'A Propos de Nous',
+			subtitle: 'Fiction ',
+			boldPart: 'ou réalité',
 			bannerText:
 				'DigiPlus Consulting est une start-up créée à Douala en 2016 ayant deux missions principales:',
 			ul: {
@@ -97,15 +99,17 @@ const data = {
 			title: 'Vérifier la ',
 			boldPart: 'disponibilité de notre salle',
 		},
-		'Nous contacter': {
+		Nous_contacter: {
+			title: 'Contactez Nous',
 			bannerText:
 				'Notre ambition est de s’installer dans les grandes citées du pays avec le souci de se rapprocher davantage des personnes étant dans le besoin.En ce moment, nous disposons d’une salle situe a Douala Bonamoussadi, derrière Hôtel de France.Veillez nous découvrir et faire vos réservations aux adresses suivantes:',
 			ul: {
-				li1: 'Siteweb: www.digiroom.cm',
-				li2: 'Réseaux Sociaux: Facebook, LindkedIn, YouTube.',
-				li3: 'Adresse mail : DigiRoom@digiplusconsulting.com',
-				li4: 'Numero de tel : 677104040 / 696422222 (Whatsapp)',
+				li1: 'Numero de tel : 677104040 / 696422222 (Whatsapp)',
+				li2: 'Siteweb: www.digiroom.cm',
+				li3: 'Réseaux Sociaux: Facebook, LindkedIn, YouTube.',
+				li4: 'Adresse mail : DigiRoom@digiplusconsulting.com',
 			},
+			lastTitle: 'PRENEZ CONTACT',
 		},
 	},
 	// english
@@ -153,8 +157,8 @@ const data = {
 		},
 		Services: {
 			buttonText: 'Make A Reservation',
-			boldPart3: 'What We Offer',
-			title3: ' To You',
+			boldPart3: 'To You',
+			title3: 'What We Offer',
 			content3: {
 				bannerText:
 					'DigiPlus provides you with a set of rooms connected and equipped with a video conferencing device and collaboration tools.',
@@ -186,6 +190,7 @@ const data = {
 			},
 		},
 		A_Propos: {
+			title: 'About Us',
 			subtitle: 'Fake Or ',
 			boldPart: 'REAL',
 			bannerText:
@@ -195,12 +200,13 @@ const data = {
 				li2: 'Influence digital ecosystems by introducing innovative digital offerings to improve the lives of people and communities.',
 			},
 			p: 'DigiRoom represents a line of products whose interest is to create media platforms to contribute to the modernization of training and communication activities for the benefit of businesses, individuals and communities.',
+			buttonText: 'Learn More',
 		},
 		Disponibilité: {
 			title: 'Check the ',
 			boldPart: 'availability of our Room',
 		},
-		'Nous contacter': {
+		Nous_contacter: {
 			title: 'Contact Us',
 			bannerText:
 				'Our ambition is to settle in the big cities of the country with the concern of getting closer to the people in need.At the moment, we have a room located in Douala Bonamoussadi, behind Hotel de France.Please discover us and make your reservations at the following address:',
@@ -210,6 +216,7 @@ const data = {
 				li3: 'Social Medias: Facebook, LindkedIn, YouTube.',
 				li4: 'Mail: DigiRoom@digiplusconsulting.com',
 			},
+			lastTitle: 'GET IN TOUCH',
 		},
 	},
 };
@@ -228,12 +235,19 @@ let lang = document.querySelector('#lang');
 // end of the navbar content
 
 /*
-* banner content initialisation
-
-*/
+ * banner content initialisation
+ */
 let bannerLeft = document.querySelector('.banner__left');
 // learn more content initialisation
 let learnMore = document.querySelector('.learn__more');
+// business content initialisation
+let business = document.querySelector('#services');
+// about us part initialisation
+let aboutUs = document.querySelector('.about');
+// availability part initialisation
+let avalability = document.querySelector('#calendar__title');
+// Contact Us part initialisation
+let contactUs = document.querySelector('.contact');
 
 changeLang = () => {
 	if (lang.checked) {
@@ -274,7 +288,6 @@ changeLang = () => {
 		learnMore.children[0].children[1].textContent = data.fr.Accueil.boldPart2;
 		learnMore.children[1].children[0].children[0].textContent =
 			data.fr.Accueil.content21.bannerText21;
-
 		learnMore.children[1].children[0].children[1].children[0].textContent =
 			data.fr.Accueil.content21.ul.li1;
 		learnMore.children[1].children[0].children[1].children[1].textContent =
@@ -296,6 +309,100 @@ changeLang = () => {
 			data.fr.Accueil.content22.bannerText22;
 		learnMore.children[1].children[1].children[1].textContent =
 			data.fr.Accueil.content22.ul.li;
+		// end of the learn more part
+
+		/*
+		 * business part
+		 */
+		business.children[0].children[0].textContent = data.fr.Services.title3;
+		business.children[0].children[2].textContent = data.fr.Services.boldPart3;
+		business.children[1].children[0].textContent =
+			data.fr.Services.content3.bannerText;
+		business.children[2].children[0].children[1].textContent =
+			data.fr.Services.content3.card1.cardTitle;
+
+		business.children[2].children[1].children[2].textContent =
+			data.fr.Services.content3.card2.cardSubtitle;
+
+		business.children[2].children[2].children[2].textContent =
+			data.fr.Services.content3.card3.cardSubtitle;
+		business.children[2].children[0].children[2].textContent =
+			data.fr.Services.content3.card1.cardSubtitle;
+
+		business.children[2].children[0].children[3].children[0].textContent =
+			data.fr.Services.content3.card1.ul.li;
+
+		business.children[2].children[1].children[3].children[0].textContent =
+			data.fr.Services.content3.card2.ul.li1;
+
+		business.children[2].children[1].children[3].children[1].textContent =
+			data.fr.Services.content3.card2.ul.li2;
+
+		business.children[2].children[0].children[5].children[0].textContent =
+			data.fr.Services.buttonText;
+
+		business.children[2].children[1].children[5].children[0].textContent =
+			data.fr.Services.buttonText;
+		business.children[2].children[2].children[5].children[0].textContent =
+			data.fr.Services.buttonText;
+		business.children[2].children[1].children[1].textContent =
+			data.fr.Services.content3.card2.cardTitle;
+		business.children[2].children[2].children[1].textContent =
+			data.fr.Services.content3.card3.cardTitle;
+
+		business.children[2].children[2].children[3].children[0].textContent =
+			data.fr.Services.content3.card3.ul.li;
+		// end of the business part
+		/**
+		 * About us section
+		 */
+		aboutUs.children[0].textContent = data.fr.A_Propos.title;
+		aboutUs.children[1].children[1].children[0].children[0].textContent =
+			data.fr.A_Propos.subtitle;
+		aboutUs.children[1].children[1].children[0].children[1].textContent =
+			data.fr.A_Propos.boldPart;
+		aboutUs.children[1].children[1].children[1].children[0].children[0].textContent =
+			data.fr.A_Propos.bannerText;
+
+		aboutUs.children[1].children[1].children[1].children[0].children[1].children[0].textContent =
+			data.fr.A_Propos.ul.li1;
+		aboutUs.children[1].children[1].children[1].children[0].children[1].children[1].textContent =
+			data.fr.A_Propos.ul.li2;
+
+		aboutUs.children[1].children[1].children[1].children[0].children[3].textContent =
+			data.fr.A_Propos.p;
+
+		aboutUs.children[1].children[1].children[1].children[1].textContent =
+			data.fr.A_Propos.buttonText;
+
+		// end of the about section
+
+		/**
+		 * avalaibility section
+		 */
+
+		avalability.children[0].textContent = data.fr.Disponibilité.title;
+		avalability.children[1].textContent = data.fr.Disponibilité.boldPart;
+		// end of the availability part
+
+		/**
+		 * contact Us section
+		 */
+		contactUs.children[0].textContent = data.fr.Nous_contacter.title;
+		contactUs.children[1].children[0].children[1].textContent =
+			data.fr.Nous_contacter.bannerText;
+
+		contactUs.children[1].children[0].children[3].children[0].children[0].textContent =
+			data.fr.Nous_contacter.ul.li1;
+		contactUs.children[1].children[0].children[3].children[0].children[1].textContent =
+			data.fr.Nous_contacter.ul.li2;
+		contactUs.children[1].children[0].children[3].children[0].children[2].textContent =
+			data.fr.Nous_contacter.ul.li3;
+		contactUs.children[1].children[0].children[3].children[0].children[3].textContent =
+			data.fr.Nous_contacter.ul.li4;
+
+		contactUs.children[1].children[0].children[5].textContent =
+			data.fr.Nous_contacter.lastTitle;
 	} else {
 		// navbar text changing in english
 		home.innerHTML = data.en.navbar[0];
@@ -354,5 +461,88 @@ changeLang = () => {
 			data.en.Accueil.content22.bannerText22;
 		learnMore.children[1].children[1].children[1].textContent =
 			data.en.Accueil.content22.ul.li;
+		// end of the learn more part
+
+		/*
+		 * business  part
+		 */
+		business.children[0].children[0].textContent = data.en.Services.title3;
+		business.children[0].children[2].textContent = data.en.Services.boldPart3;
+		business.children[1].children[0].textContent =
+			data.en.Services.content3.bannerText;
+		business.children[2].children[0].children[1].textContent =
+			data.en.Services.content3.card1.cardTitle;
+		business.children[2].children[1].children[1].textContent =
+			data.en.Services.content3.card2.cardTitle;
+		business.children[2].children[2].children[1].textContent =
+			data.en.Services.content3.card3.cardTitle;
+		business.children[2].children[0].children[3].children[0].textContent =
+			data.en.Services.content3.card1.ul.li;
+		business.children[2].children[1].children[3].children[0].textContent =
+			data.en.Services.content3.card2.ul.li1;
+		business.children[2].children[1].children[3].children[1].textContent =
+			data.en.Services.content3.card2.ul.li2;
+		business.children[2].children[0].children[2].textContent =
+			data.en.Services.content3.card1.cardSubtitle;
+		business.children[2].children[0].children[5].children[0].textContent =
+			data.en.Services.buttonText;
+		business.children[2].children[1].children[5].children[0].textContent =
+			data.en.Services.buttonText;
+		business.children[2].children[2].children[5].children[0].textContent =
+			data.en.Services.buttonText;
+		business.children[2].children[1].children[2].textContent =
+			data.en.Services.content3.card2.cardSubtitle;
+		business.children[2].children[2].children[2].textContent =
+			data.en.Services.content3.card3.cardSubtitle;
+		business.children[2].children[2].children[3].children[0].textContent =
+			data.en.Services.content3.card3.ul.li;
+		business.children[2].children[0].children[2].textContent =
+			data.en.Services.content3.card1.cardSubtitle;
+		//  end of the business part
+
+		/**
+		 * About us section
+		 */
+		aboutUs.children[0].textContent = data.en.A_Propos.title;
+		aboutUs.children[1].children[1].children[0].children[0].textContent =
+			data.en.A_Propos.subtitle;
+		aboutUs.children[1].children[1].children[0].children[1].textContent =
+			data.en.A_Propos.boldPart;
+		aboutUs.children[1].children[1].children[1].children[0].children[0].textContent =
+			data.en.A_Propos.bannerText;
+		aboutUs.children[1].children[1].children[1].children[0].children[1].children[0].textContent =
+			data.en.A_Propos.ul.li1;
+		aboutUs.children[1].children[1].children[1].children[0].children[1].children[1].textContent =
+			data.en.A_Propos.ul.li2;
+		aboutUs.children[1].children[1].children[1].children[0].children[3].textContent =
+			data.en.A_Propos.p;
+		aboutUs.children[1].children[1].children[1].children[1].textContent =
+			data.en.A_Propos.buttonText;
+		// end of the about Us section
+
+		/**
+		 * avalaibility  section
+		 */
+		avalability.children[0].textContent = data.en.Disponibilité.title;
+		avalability.children[1].textContent = data.en.Disponibilité.boldPart;
+		// end of the availability part
+
+		/**
+		 * contact Us section
+		 */
+		contactUs.children[0].textContent = data.en.Nous_contacter.title;
+		contactUs.children[1].children[0].children[1].textContent =
+			data.en.Nous_contacter.bannerText;
+
+		contactUs.children[1].children[0].children[3].children[0].children[0].textContent =
+			data.en.Nous_contacter.ul.li1;
+		contactUs.children[1].children[0].children[3].children[0].children[1].textContent =
+			data.en.Nous_contacter.ul.li2;
+		contactUs.children[1].children[0].children[3].children[0].children[2].textContent =
+			data.en.Nous_contacter.ul.li3;
+		contactUs.children[1].children[0].children[3].children[0].children[3].textContent =
+			data.en.Nous_contacter.ul.li4;
+		contactUs.children[1].children[0].children[5].textContent =
+			data.en.Nous_contacter.lastTitle;
 	}
 };
